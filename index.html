@@ -4,21 +4,42 @@
 
 <body>
 	<table>
-	<tr> <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required> </tr>>
+	<tr> <td> <label for="uname"><b>Username</b></label> 
+    <input id='username' type="text" placeholder="Enter Username" name="uname" required> </td></tr>
 
-   <tr> <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required> </tr>>
+   <tr> <td> <label for="psw"><b>Password</b></label>
+    <input id = 'password' type="password" placeholder="Enter Password" name="psw" required> </td> </tr>
 
-   <tr> <button type="submit">Login</button> </tr>>
+   <tr> <td> <button id ='login'type="submit">Login</button> </td> </tr>
     <label>
-     <tr> <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+     <tr> <td> <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label> </td> </tr>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <tr> <td> <button type="button" class="cancelbtn">Cancel</button> </td> </tr>
+   <tr> <td> <span class="psw">Forgot <a href="#">password?</a></span> </td> </tr>
   </div> 
-  </table>>
-</body>>
+  </table>
+
+  <script type="text/javascript">
+
+  	const button = document.getElementById('login') 
+  	button.addEventListener('click', function() {
+  		console.log('button clicked')
+
+  		const usernameNode = document.getElementById('username');
+  		const passwordNode = document.getElementById('password');
+  		//retrieve password
+  		//retrieve username
+  		//send a message to express server (fetch/request)
+  		//validate the user
+  		//finally send the user to dashboard
+
+  	const usernameValue = usernameNode.value;
+  	const passwordValue = passwordNode.value;
+  	console.log(usernameValue, passwordValue); 
+  	})
+  	
+  </script>
+</body>
